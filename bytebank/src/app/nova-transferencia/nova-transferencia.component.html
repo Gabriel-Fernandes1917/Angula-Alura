@@ -1,9 +1,19 @@
-<form>
-  <label for="valor">Valor</label>
-  <input type="text" name="" id="valor">
+<section class="container">
+  <form class="formulario" (ngSubmit)="transferir()"> <!--event bind-->
+    <h2 class="formulario__titulo">Nova Transferencia</h2>
 
-  <label for="nome"></label>
-  <input type="text" id="nome">
+    <div class="form-field">
+      <label class="form-field__label" for="valor">Valor</label>
+      <input class="form-field__input" type="text" name="" id="valor" [(ngModel)]="valor" name="valor">
+    </div>
 
-  <button>Enviar</button>
-</form>
+    <div class="form-field">
+      <label class="form-field__label" for="destino">Destino</label>
+      <input class="form-field__input" type="text" id="destino" [(ngModel)]="destino" name="destino">
+    </div>
+
+    <div class="botao-wrapper">
+      <button class="botao" type="submit">Transferir</button>
+    </div>
+  </form>
+</section>
